@@ -153,6 +153,12 @@ button.primary {
   color: var(--white);
 }
 
+section {
+  padding: 6rem 0;
+}
+
+/* -----------Global Custom Layout Classes------------*/
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -164,9 +170,22 @@ button.primary {
   width: min(90%, 1400px);
 }
 
-section {
-  padding: 6rem 0;
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.right {
+  justify-self: end;
+}
+
 
 /* -----------Header Style------------*/
 
@@ -191,6 +210,7 @@ header {
 header.shrink {
   padding: 0.5rem 0;
   background-color: var(--bg-dark);
+  border-bottom: var(--black) 4px solid;
 }
 
 header.shrink .logo svg .black {
@@ -298,7 +318,7 @@ nav#primary-menu.active a.navlinks {
 /* ------------Custom Section Styling-------------- */
 
 section#problems {
-  background-color: var(--black);
+  background-color: var(--bg-dark);
 }
 
 #problems .infite-loop {
