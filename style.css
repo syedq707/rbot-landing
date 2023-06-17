@@ -66,13 +66,14 @@ h4 {
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
   text-wrap: balance;
+  
 }
 
 h1 {
   font-size: clamp(2.25rem, 1.783vw + 1.86rem, 4rem);
   line-height: clamp(3.375rem, 1.86vw + 2.968rem, 5.2rem);
   font-weight: 600;
-
+  width: min(90%, 20ch);
 }
 
 h2 {
@@ -97,6 +98,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.125rem, 0.382vw + 1.041rem, 1.5rem);
   line-height: clamp(1.688rem, 0.268vw + 1.629rem, 1.95rem);
+  width: min(100%, 50ch);
 }
 
 .font-white {
@@ -159,7 +161,7 @@ button.primary {
 }
 
 button.cta-btn {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 section {
