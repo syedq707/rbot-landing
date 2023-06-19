@@ -188,14 +188,14 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   gap: 2rem;
-  width: 100%;
+
 }
 
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  width: 100%;
+
 }
 
 .flex-row {
@@ -210,7 +210,7 @@ section {
 
 .grid-center {
   display: grid;
-  place-items: center;;
+  place-items: center;
 }
 
 
@@ -366,6 +366,10 @@ svg {
 
 section#plan {
   background-color: var(--bg-yellow);
+}
+
+section#plan .grid-3 {
+  width: 100%;
 }
 
 section#cta {
