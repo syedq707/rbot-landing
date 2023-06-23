@@ -31,6 +31,9 @@
   --green: #e6fe86;
   --black: #000000;
   --white: #ffffff;
+  --highlight-red: #ffa7a7;
+  --highlight-orange: #ffc4a3;
+  --highlight-yellow: #ffd7a7;
 
   --bg-light: #fff3e0;
   --bg-yellow: #ffeccf;
@@ -99,7 +102,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.125rem, 0.382vw + 1.041rem, 1.5rem);
   line-height: clamp(1.688rem, 0.268vw + 1.629rem, 1.95rem);
-  width: min(100%, 50ch);
+  max-width: 50ch;
 }
 
 .font-white {
@@ -116,6 +119,21 @@ p {
 
 .font-orange {
   color: var(--orange);
+}
+
+.font-bg-red {
+  background-color: var(--highlight-red);
+  padding: 0 0.2em;
+}
+
+.font-bg-yellow {
+  background-color: var(--highlight-yellow);
+  padding: 0 0.2em;
+}
+
+.font-bg-orange {
+  background-color: var(--highlight-orange);
+  padding: 0 0.2em;
 }
 
 .text-center {
@@ -201,6 +219,10 @@ section {
   gap: 1rem;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .right {
   justify-self: end;
 }
@@ -238,10 +260,6 @@ header.shrink {
 
 header.shrink .logo svg .black {
   fill: var(--white);
-}
-
-header .logo {
-  width: max(22vw, 4rem);
 }
 
 .shrink a.navlinks {
@@ -383,4 +401,13 @@ section#success {
 
 footer {
   background-color: var(--bg-dark);
+  padding: 3rem 0;
+}
+
+footer .logo svg .black {
+  fill: var(--white);
+}
+
+footer p {
+  font-weight: 600;
 }
