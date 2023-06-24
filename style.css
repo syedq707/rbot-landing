@@ -181,12 +181,12 @@ button.primary {
   color: var(--white);
 }
 
-button.cta-btn {
-  margin-top: 3rem;
+.cta-btn button {
+  margin-top: 2rem;
 }
 
 section {
-  padding: clamp(4rem, 12vw, 10rem) 0;
+  padding: clamp(4rem, 12vw, 8rem) 0;
 }
 
 /* -----------Global Custom Layout Classes------------*/
@@ -401,6 +401,10 @@ nav#primary-menu.active a.navlinks {
 
 section#problems {
   background-color: var(--bg-dark);
+}
+
+#problems {
+  overflow-x: hidden;
 }
 
 #problems .infite-loop {
