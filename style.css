@@ -60,6 +60,8 @@ body {
 img,
 svg {
   max-width: 100%;
+  height: fit-content;
+  display: block;
 }
 
 h1,
@@ -184,7 +186,7 @@ button.cta-btn {
 }
 
 section {
-  padding: 8rem 0;
+  padding: clamp(4rem, 12vw, 10rem) 0;
 }
 
 /* -----------Global Custom Layout Classes------------*/
@@ -204,7 +206,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .grid-2 {
@@ -219,8 +221,16 @@ section {
   gap: 1rem;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .space-between {
   justify-content: space-between;
+}
+
+.align-center {
+  align-self: center;
 }
 
 .right {
@@ -230,6 +240,17 @@ section {
 .grid-center {
   display: grid;
   place-items: center;
+}
+
+.icon {
+  margin: auto;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px 0px #000;
 }
 
 /* -----------Header Style------------*/
@@ -256,6 +277,10 @@ header.shrink {
   padding: 0.5rem 0;
   background-color: var(--bg-dark);
   border-bottom: var(--black) 6px solid;
+}
+
+header .logo {
+  width: min(18vw, 8rem);
 }
 
 header.shrink .logo svg .black {
@@ -362,6 +387,18 @@ nav#primary-menu.active a.navlinks {
 
 /* ------------Custom Section Styling-------------- */
 
+#hero .grid-2 {
+  gap: 0rem;
+}
+
+#hero .hero-img {
+  padding-top: 2rem;
+}
+
+#benefits {
+  padding-top: 6rem;
+}
+
 section#problems {
   background-color: var(--bg-dark);
 }
@@ -374,7 +411,7 @@ section#problems {
 }
 
 #problems h4,
-svg {
+#problems svg {
   flex-shrink: 0;
 }
 
@@ -383,6 +420,8 @@ section#plan {
 }
 
 section#plan .grid-3 {
+  justify-items: stretch;
+  padding-top: 2rem;
   width: 100%;
 }
 
@@ -406,6 +445,10 @@ footer {
 
 footer .logo svg .black {
   fill: var(--white);
+}
+
+footer .logo {
+  width: min(26vw, 16rem);
 }
 
 footer p {
