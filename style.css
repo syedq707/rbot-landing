@@ -467,7 +467,7 @@ footer p {
 .marquee {
   top: 0;
   left: 110%;
-  width: 110%;
+  width: 110.5%;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
