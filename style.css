@@ -403,15 +403,11 @@ section#problems {
   background-color: var(--bg-dark);
 }
 
-#problems {
-  overflow-x: hidden;
-}
-
 #problems .infite-loop {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-evenly;
 }
 
 #problems h4,
@@ -457,4 +453,36 @@ footer .logo {
 
 footer p {
   font-weight: 600;
+}
+
+/* Infinite Loop Animation */
+
+.loop-container {
+  position: relative;
+  overflow: hidden;
+  height: 64px;
+  width: 100%;
+}
+
+.marquee {
+  top: 0;
+  left: 110%;
+  width: 110%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee2 {
+  animation-delay: 30s;
+}
+
+@keyframes marquee {
+  0% {
+    left: -110%;
+  }
+  100% {
+    left: 110%;
+  }
 }

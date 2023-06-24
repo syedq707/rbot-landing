@@ -1,19 +1,19 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Infinite Loop Business Units
+// Infinite Loop Problems
 
 // Create array of elements to tween on
 
-const loopElements = gsap.utils.toArray(".loop");
+// const loopElements = gsap.utils.toArray(".loop");
 
-const problemLoop = horizontalLoop(loopElements, {
-  paused: true, // Sets the tween to be paused initially
-  repeat: -1, // Makes sure the tween runs infinitely
+// const problemLoop = horizontalLoop(loopElements, {
+//   paused: true, // Sets the tween to be paused initially
+//   repeat: -1, // Makes sure the tween runs infinitely
 
-  reversed: false,
-});
+//   reversed: false,
+// });
 
-problemLoop.play();
+// problemLoop.play();
 
 /*
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
