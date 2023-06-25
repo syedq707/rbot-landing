@@ -31,9 +31,9 @@
   --green: #e6fe86;
   --black: #000000;
   --white: #ffffff;
-  --highlight-red: #ffa7a7;
-  --highlight-orange: #ffc4a3;
-  --highlight-yellow: #ffd7a7;
+  --highlight-red: hsl(356, 98%, 86%);
+  --highlight-orange: hsl(22, 100%, 86%);
+  --highlight-yellow: hsl(33, 98%, 86%);
 
   --bg-light: #fff3e0;
   --bg-yellow: #ffeccf;
@@ -433,8 +433,8 @@ section#problems {
 }
 
 #solutions .mockup {
- grid-row: 1 / 2;
- grid-column: 1/2;
+  grid-row: 1 / 2;
+  grid-column: 1/2;
 }
 
 section#plan {
@@ -477,6 +477,52 @@ footer p {
   font-weight: 600;
 }
 
+/* ANIMATIONS */
+
+/* Hero Section Animation */
+
+#hero h1 {
+  animation: fadeInUp 0.6s ease-in;
+}
+
+#hero p {
+  animation: fadeInUp 0.6s ease-in 0.3s;
+}
+
+#hero .cta-btn {
+  animation: fadeInUp 0.6s ease-in 0.6s;
+}
+
+#hero .hero-img {
+  animation: fadeInRight 0.6s ease-in 0.3s;
+}
+
+#hero .benefit {
+  animation: fadeInUp 0.6s ease-in 1s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /* Infinite Loop Animation */
 
 .loop-container {
@@ -493,11 +539,11 @@ footer p {
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  animation: marquee 60s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .marquee2 {
-  animation-delay: 30s;
+  animation-delay: 20s;
 }
 
 @keyframes marquee {

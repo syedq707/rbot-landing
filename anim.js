@@ -5,13 +5,13 @@ gsap.registerPlugin(ScrollTrigger);
 const fadeInUp = {
   opacity: 0,
   y: 10,
-  duration: 0.8,
+  duration: 0.6,
 };
 
 const fadeInDown = {
   opacity: 0,
   y: -10,
-  duration: 0.8,
+  duration: 0.6,
 };
 
 const fadeInLeft = {
@@ -26,45 +26,23 @@ const fadeInRight = {
   duration: 1.2,
 };
 
-// Hero Section
+const zoomIn = {
+  opacity: 0,
+  scale: 0,
+  duration: 1.2,
+};
 
-heroTl = gsap.timeline({
-  stagger: 0.1,
-  ease: "power2.in",
-  scrollTrigger: {
-    trigger: "#hero",
-    // markers: true,
-    start: "top 60%",
-    end: "bottom top",
-    toggleActions: "restart none restart none",
-  },
-});
+const largeDevice = window.matchMedia("(min-width: 1200px)");
 
-heroTl
-  .from("#hero h1", fadeInUp)
-  .from("#hero p", fadeInUp, "-=0.4")
-  .from("#hero .cta-btn", fadeInUp, "-=0.4")
-  .from("#hero .hero-img", fadeInLeft, "-=0.4");
+largeDevice.addListener(handleDeviceChange);
 
-// Benefits Section
+function handleDeviceChange(e) {
+  if (e.matches) {
+  }
+}
 
-benefitsTl = gsap.timeline({
-  stagger: 0.1,
-  ease: "power2.in",
-  scrollTrigger: {
-    trigger: "#benefits",
-    // markers: true,
-    start: "top bottom",
-    end: "bottom top",
-    toggleActions: "restart none restart none",
-  },
-});
-
-benefits = document.querySelectorAll(".benefit");
-
-benefits.forEach((benefit) => {
-  benefitsTl.from(benefit, fadeInUp, "-=0.4");
-});
+// Run it initially
+handleDeviceChange(largeDevice);
 
 // Problem Section
 
@@ -78,7 +56,7 @@ gsap.from("#problems h2", {
     // markers: true,
     start: "top 80%",
     end: "bottom top",
-    toggleActions: "restart none restart none",
+    toggleActions: "restart none none none",
   },
 });
 
@@ -89,7 +67,7 @@ solutionsTl = gsap.timeline({
   ease: "power2.in",
   scrollTrigger: {
     trigger: "#solutions",
-    markers: true,
+    // markers: true,
     start: "5% top",
     end: "+=4000",
     pin: true,
@@ -102,45 +80,46 @@ solutionsTl.from("#solutions h2", fadeInUp);
 socailProofs = document.querySelectorAll(".proof");
 
 socailProofs.forEach((proof) => {
-  solutionsTl.from(proof, fadeInUp);
+  solutionsTl.from(proof, fadeInUp, "-=0.4");
 });
 
-solutionsTl.from("#solutions .m1", {
-  opacity: 0,
-  x: 20,
-});
-solutionsTl.from("#solutions .p1", {
-  opacity: 0,
-  y: 20,
-});
-solutionsTl.to("#solutions .m1", {
-  opacity: 0,
-  x: 20,
-});
-solutionsTl.to("#solutions .p1", {
-  opacity: 0,
-  y: 20,
-});
-solutionsTl.from("#solutions .m2", {
-  opacity: 0,
-  x: 20,
-});
-solutionsTl.from("#solutions .p2", {
-  opacity: 0,
-  y: 20,
-});
-solutionsTl.to("#solutions .m2", {
-  opacity: 0,
-  x: 20,
-});
-solutionsTl.to("#solutions .p2", {
-  opacity: 0,
-  y: 20,
-});
-solutionsTl.from("#solutions .m3", {
-  opacity: 0,
-  x: 20,
-});
+solutionsTl
+  .from("#solutions .m1", {
+    opacity: 0,
+    x: 20,
+  })
+  .from("#solutions .p1", {
+    opacity: 0,
+    y: 20,
+  })
+  .to("#solutions .m1", {
+    opacity: 0,
+    x: 20,
+  })
+  .to("#solutions .p1", {
+    opacity: 0,
+    y: 20,
+  })
+  .from("#solutions .m2", {
+    opacity: 0,
+    x: 20,
+  })
+  .from("#solutions .p2", {
+    opacity: 0,
+    y: 20,
+  })
+  .to("#solutions .m2", {
+    opacity: 0,
+    x: 20,
+  })
+  .to("#solutions .p2", {
+    opacity: 0,
+    y: 20,
+  })
+  .from("#solutions .m3", {
+    opacity: 0,
+    x: 20,
+  });
 solutionsTl.from("#solutions .p3", {
   opacity: 0,
   y: 20,
@@ -156,7 +135,7 @@ planTl = gsap.timeline({
     // markers: true,
     start: "top 60%",
     end: "bottom top",
-    toggleActions: "restart none restart none",
+    toggleActions: "restart none none none",
   },
 });
 
@@ -178,7 +157,7 @@ ctaTl = gsap.timeline({
     // markers: true,
     start: "top 60%",
     end: "bottom top",
-    toggleActions: "restart none restart none",
+    toggleActions: "restart none none none",
   },
 });
 
@@ -197,7 +176,7 @@ failureTl = gsap.timeline({
     // markers: true,
     start: "top 60%",
     end: "bottom top",
-    toggleActions: "restart none restart none",
+    toggleActions: "restart none none none",
   },
 });
 
@@ -216,7 +195,7 @@ successTl = gsap.timeline({
     // markers: true,
     start: "top 60%",
     end: "bottom top",
-    toggleActions: "restart none restart none",
+    toggleActions: "restart none none none",
   },
 });
 
@@ -226,4 +205,4 @@ successTl
   .from("#success .b1", fadeInUp, "-=0.2")
   .from("#success .b2", fadeInUp, "-=0.2")
   .from("#success .b3", fadeInUp, "-=0.2")
-  .from("#success .cta-btn", fadeInUp, "-=0.2");
+  .from("#success .cta-btn", zoomIn, "-=0.2");
