@@ -415,6 +415,28 @@ section#problems {
   flex-shrink: 0;
 }
 
+.products {
+  position: relative;
+}
+
+.product {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#solutions .mockups {
+display: grid;
+grid-template: 1fr / 1fr;
+padding-top: 4rem;
+align-items: end;
+}
+
+#solutions .mockup {
+ grid-row: 1 / 2;
+ grid-column: 1/2;
+}
+
 section#plan {
   background-color: var(--bg-yellow);
 }
