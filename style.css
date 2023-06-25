@@ -416,20 +416,20 @@ section#problems {
 }
 
 .products {
-  position: relative;
+  display: grid;
+  grid-template: 1fr / 1fr;
 }
 
 .product {
-  position: absolute;
-  top: 0;
-  left: 0;
+  grid-row: 1 / 2;
+  grid-column: 1/2;
 }
 
 #solutions .mockups {
-display: grid;
-grid-template: 1fr / 1fr;
-padding-top: 4rem;
-align-items: end;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  padding-top: 4rem;
+  align-items: end;
 }
 
 #solutions .mockup {

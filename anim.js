@@ -32,7 +32,7 @@ heroTl = gsap.timeline({
     // markers: true,
     start: "top 60%",
     end: "bottom top",
-    // toggleActions: "restart none none none",
+    toggleActions: "restart none restart none",
   },
 });
 
@@ -50,7 +50,7 @@ benefitsTl = gsap.timeline({
     // markers: true,
     start: "top bottom",
     end: "bottom top",
-    // toggleActions: "restart none none none",
+    toggleActions: "restart none restart none",
   },
 });
 
@@ -70,7 +70,7 @@ gsap.from("#problems h2", {
     // markers: true,
     start: "top 80%",
     end: "bottom top",
-    // toggleActions: "restart none none none",
+    toggleActions: "restart none restart none",
   },
 });
 
@@ -129,7 +129,7 @@ solutionsTl.to("#solutions .p2", {
 });
 solutionsTl.from("#solutions .m3", {
   opacity: 0,
-  y: 20,
+  x: 20,
 });
 solutionsTl.from("#solutions .p3", {
   opacity: 0,
