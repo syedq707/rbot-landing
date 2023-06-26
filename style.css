@@ -534,8 +534,8 @@ footer p {
 
 .marquee {
   top: 0;
-  left: 110%;
-  width: 110.5%;
+  left: -120rem;
+  width: 120rem;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
@@ -548,9 +548,9 @@ footer p {
 
 @keyframes marquee {
   0% {
-    left: -110%;
+    left: -120rem;
   }
   100% {
-    left: 110%;
+    left: 120rem;
   }
 }
