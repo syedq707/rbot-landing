@@ -186,7 +186,7 @@ button.primary {
 }
 
 section {
-  padding: clamp(4rem, 12vw, 8rem) 0;
+  padding: clamp(4rem, 10vw, 8rem) 0;
 }
 
 /* -----------Global Custom Layout Classes------------*/
@@ -415,26 +415,14 @@ section#problems {
   flex-shrink: 0;
 }
 
-.products {
-  display: grid;
-  grid-template: 1fr / 1fr;
+#solutions .products-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.product {
-  grid-row: 1 / 2;
-  grid-column: 1/2;
-}
-
-#solutions .mockups {
-  display: grid;
-  grid-template: 1fr / 1fr;
-  padding-top: 4rem;
-  align-items: end;
-}
-
-#solutions .mockup {
-  grid-row: 1 / 2;
-  grid-column: 1/2;
+.products-container .mockup {
+  max-width: 80%;
+  align-self: flex-end;
 }
 
 section#plan {
@@ -552,5 +540,35 @@ footer p {
   }
   100% {
     left: 120rem;
+  }
+}
+
+/* Large Screens Media Queries */
+
+@media (min-width: 1200px) {
+  #solutions .products-container {
+    display: grid;
+    grid-template: 2fr 1fr / 1fr 1fr;
+  }
+
+  .products-container .head-content {
+    grid-column: 1/ 2;
+    grid-row: 1 / 2;
+  }
+
+  .products-container .product {
+    grid-column: 1/ 2;
+    grid-row: 2 / 3;
+  }
+
+  .products-container .mockup {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  .products-container .m3 {
+    align-self: end;
+    padding-bottom: 4rem;
   }
 }

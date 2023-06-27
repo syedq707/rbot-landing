@@ -62,7 +62,7 @@ function handleDeviceChange(e) {
       scrollTrigger: {
         trigger: "#solutions",
         // markers: true,
-        start: "5% top",
+        start: "4% top",
         end: "+=4000",
         pin: true,
         scrub: 1,
