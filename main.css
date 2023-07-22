@@ -64,6 +64,9 @@ svg {
   display: block;
 }
 
+
+/* --------------Font Styling------- */
+
 h1,
 h2,
 h3,
@@ -107,6 +110,10 @@ p {
   max-width: 50ch;
 }
 
+.small-font {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
 .font-white {
   color: var(--white);
 }
@@ -141,6 +148,9 @@ p {
 .text-center {
   text-align: center;
 }
+
+
+/* --------------Custom Element Styling---------- */
 
 ul {
   list-style: none;
@@ -188,6 +198,29 @@ button.primary {
 section {
   padding: clamp(4rem, 10vw, 8rem) 0;
 }
+
+
+/* --------------Form Styling---------- */
+
+label {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 0.9423rem + 0.3077vw, 1.25rem);
+  line-height: clamp(1.688rem, 0.268vw + 1.629rem, 1.95rem);
+  padding-left: 0.8rem;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.125rem, 0.382vw + 1.041rem, 1.5rem);
+  line-height: clamp(1.688rem, 0.268vw + 1.629rem, 1.95rem);
+  padding: 0.4em 0.8em;
+  background-color: transparent;
+  border: 3px solid #000000;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 
 /* -----------Global Custom Layout Classes------------*/
 
