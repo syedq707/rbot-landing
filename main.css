@@ -64,7 +64,6 @@ svg {
   display: block;
 }
 
-
 /* --------------Font Styling------- */
 
 h1,
@@ -149,7 +148,6 @@ p {
   text-align: center;
 }
 
-
 /* --------------Custom Element Styling---------- */
 
 ul {
@@ -199,7 +197,6 @@ section {
   padding: clamp(4rem, 10vw, 8rem) 0;
 }
 
-
 /* --------------Form Styling---------- */
 
 label {
@@ -220,7 +217,6 @@ input {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-
 
 /* -----------Global Custom Layout Classes------------*/
 
@@ -429,7 +425,7 @@ nav#primary-menu.active a.navlinks {
 }
 
 #benefits {
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 
 section#problems {
