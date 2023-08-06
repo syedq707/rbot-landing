@@ -451,7 +451,7 @@ section#problems {
   max-width: 24ch;
 }
 
-#solutions .products-container {
+.products-container {
   /* display: flex;
   flex-direction: column; */
   padding: 4rem 0;
@@ -460,6 +460,11 @@ section#problems {
 .products-container .mockup {
   max-width: 80%;
   align-self: flex-end;
+}
+
+#solutions .icons {
+  padding-top: 0.6em;
+  gap: 2rem;
 }
 
 section#plan {
