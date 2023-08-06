@@ -56,68 +56,68 @@ function handleDeviceChange(e) {
 
     // Solutions Section
 
-    solutionsTl = gsap.timeline({
-      stagger: 0.1,
-      ease: "power2.in",
-      scrollTrigger: {
-        trigger: "#solutions",
-        // markers: true,
-        start: "4% top",
-        end: "+=4000",
-        pin: true,
-        scrub: 1,
-      },
-    });
+    // productsTl = gsap.timeline({
+    //   stagger: 0.1,
+    //   ease: "power2.in",
+    //   scrollTrigger: {
+    //     trigger: "products-container",
+    //     // markers: true,
+    //     start: "4% top",
+    //     end: "+=4000",
+    //     pin: true,
+    //     scrub: 1,
+    //   },
+    // });
 
-    solutionsTl.from("#solutions h2", fadeInUp);
+    // solutionsTl.from("#solutions h2", fadeInUp);
 
-    socailProofs = document.querySelectorAll(".proof");
+    // socailProofs = document.querySelectorAll(".proof");
 
-    socailProofs.forEach((proof) => {
-      solutionsTl.from(proof, fadeInUp, "-=0.4");
-    });
+    // socailProofs.forEach((proof) => {
+    //   solutionsTl.from(proof, fadeInUp, "-=0.4");
+    // });
 
-    solutionsTl
-      .from("#solutions .m1", {
-        opacity: 0,
-        x: 20,
-      })
-      .from("#solutions .p1", {
-        opacity: 0,
-        y: 20,
-      })
-      .to("#solutions .m1", {
-        opacity: 0,
-        x: 20,
-      })
-      .to("#solutions .p1", {
-        opacity: 0,
-        y: 20,
-      })
-      .from("#solutions .m2", {
-        opacity: 0,
-        x: 20,
-      })
-      .from("#solutions .p2", {
-        opacity: 0,
-        y: 20,
-      })
-      .to("#solutions .m2", {
-        opacity: 0,
-        x: 20,
-      })
-      .to("#solutions .p2", {
-        opacity: 0,
-        y: 20,
-      })
-      .from("#solutions .m3", {
-        opacity: 0,
-        x: 20,
-      });
-    solutionsTl.from("#solutions .p3", {
-      opacity: 0,
-      y: 20,
-    });
+    // solutionsTl
+    //   .from("#solutions .m1", {
+    //     opacity: 0,
+    //     x: 20,
+    //   })
+    //   .from("#solutions .p1", {
+    //     opacity: 0,
+    //     y: 20,
+    //   })
+    //   .to("#solutions .m1", {
+    //     opacity: 0,
+    //     x: 20,
+    //   })
+    //   .to("#solutions .p1", {
+    //     opacity: 0,
+    //     y: 20,
+    //   })
+    //   .from("#solutions .m2", {
+    //     opacity: 0,
+    //     x: 20,
+    //   })
+    //   .from("#solutions .p2", {
+    //     opacity: 0,
+    //     y: 20,
+    //   })
+    //   .to("#solutions .m2", {
+    //     opacity: 0,
+    //     x: 20,
+    //   })
+    //   .to("#solutions .p2", {
+    //     opacity: 0,
+    //     y: 20,
+    //   })
+    //   .from("#solutions .m3", {
+    //     opacity: 0,
+    //     x: 20,
+    //   });
+    // solutionsTl.from("#solutions .p3", {
+    //   opacity: 0,
+    //   y: 20,
+    // });
 
     // Plan Section
 
@@ -135,30 +135,13 @@ function handleDeviceChange(e) {
 
     planTl.from("#plan h2", fadeInUp);
 
-    cards = document.querySelectorAll("#plan .card");
+    steps = document.querySelectorAll("#plan .step");
 
-    cards.forEach((card) => {
-      planTl.from(card, fadeInUp, "-=0.2");
+    steps.forEach((step) => {
+      planTl.from(step, fadeInUp, "-=0.2");
     });
 
-    //  CTA Section
-
-    ctaTl = gsap.timeline({
-      stagger: 0.1,
-      ease: "power2.in",
-      scrollTrigger: {
-        trigger: "#cta",
-        // markers: true,
-        start: "top 60%",
-        end: "bottom top",
-        toggleActions: "restart none none none",
-      },
-    });
-
-    ctaTl
-      .from("#cta h2", fadeInUp)
-      .from("#cta p", fadeInUp, "-=0.2")
-      .from("#cta .cta-btn", fadeInUp, "-=0.2");
+    planTl.from("#plan .cta-btn", fadeInUp, "-=0.2");
 
     //  Failure Section
 
