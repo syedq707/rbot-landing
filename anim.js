@@ -56,6 +56,8 @@ function handleDeviceChange(e) {
 
     // Solutions Section
 
+    // solutionsTl.from("#solutions h2", fadeInUp);
+
     // productsTl = gsap.timeline({
     //   stagger: 0.1,
     //   ease: "power2.in",
@@ -68,8 +70,6 @@ function handleDeviceChange(e) {
     //     scrub: 1,
     //   },
     // });
-
-    // solutionsTl.from("#solutions h2", fadeInUp);
 
     // socailProofs = document.querySelectorAll(".proof");
 
