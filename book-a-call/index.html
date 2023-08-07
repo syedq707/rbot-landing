@@ -237,12 +237,13 @@
         }
 
         document.getElementById('submit').onclick = function () {
+            event.preventDefault();
             let restaurantName =
-                document.getElementById("restaurant");
+                document.getElementById('restaurant').value;
             let email =
-                document.getElementById("email");
+                document.getElementById('email').value;
             let phone =
-                document.getElementById('name');
+                document.getElementById('phone').value;
             sendForm(restaurantName, email, phone);
 
         }
