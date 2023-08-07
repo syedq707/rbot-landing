@@ -60,9 +60,10 @@ body {
 img,
 svg {
   max-width: 100%;
-  height: fit-content;
   display: block;
+  height: fit-content;
 }
+
 
 /* --------------Font Styling------- */
 
@@ -94,7 +95,6 @@ h3 {
   line-height: clamp(2.4rem, 0.408vw + 2.311rem, 2.8rem);
   font-weight: 500;
   max-width: 20ch;
-  text-wrap: balance;
 }
 
 h4 {
@@ -243,7 +243,7 @@ input {
 
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
@@ -451,15 +451,9 @@ section#problems {
   max-width: 24ch;
 }
 
-.products-container {
-  /* display: flex;
-  flex-direction: column; */
-  padding: 4rem 0;
-}
 
 .products-container .mockup {
-  max-width: 80%;
-  align-self: flex-end;
+  justify-self: center;
 }
 
 #solutions .icons {
@@ -468,7 +462,6 @@ section#problems {
 }
 
 section#plan {
-  /* background-color: var(--bg-yellow); */
   background-color: var(--bg-dark);
 }
 
@@ -520,9 +513,7 @@ footer p {
   animation: fadeInRight 0.6s ease-in 0.3s;
 }
 
-#hero .benefit {
-  animation: fadeInUp 0.6s ease-in 1s;
-}
+
 
 @keyframes fadeInUp {
   0% {
@@ -581,29 +572,5 @@ footer p {
 /* Large Screens Media Queries */
 
 @media (min-width: 1200px) {
-  /* #solutions .products-container {
-    display: grid;
-    grid-template: 2fr 1fr / 1fr 1fr;
-  }
-
-  .products-container .head-content {
-    grid-column: 1/ 2;
-    grid-row: 1 / 2;
-  }
-
-  .products-container .product {
-    grid-column: 1/ 2;
-    grid-row: 2 / 3;
-  }
-
-  .products-container .mockup {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-    align-self: center;
-  }
-
-  .products-container .m3 {
-    align-self: end;
-    padding-bottom: 4rem;
-  } */
+ 
 }

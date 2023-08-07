@@ -56,68 +56,217 @@ function handleDeviceChange(e) {
 
     // Solutions Section
 
-    // solutionsTl.from("#solutions h2", fadeInUp);
+    gsap.from("#solutions h2", {
+      opacity: 0,
+      y: 10,
+      duration: 0.6,
+      ease: "power2.in",
+      scrollTrigger: {
+        trigger: "#problems",
+        // markers: true,
+        start: "top 80%",
+        end: "bottom top",
+        toggleActions: "restart none none none",
+      },
+    });
 
-    // productsTl = gsap.timeline({
-    //   stagger: 0.1,
-    //   ease: "power2.in",
-    //   scrollTrigger: {
-    //     trigger: "products-container",
-    //     // markers: true,
-    //     start: "4% top",
-    //     end: "+=4000",
-    //     pin: true,
-    //     scrub: 1,
-    //   },
-    // });
+    // Products Reveal Animation
 
-    // socailProofs = document.querySelectorAll(".proof");
+    // Product 1
 
-    // socailProofs.forEach((proof) => {
-    //   solutionsTl.from(proof, fadeInUp, "-=0.4");
-    // });
+    p1Tl = gsap.timeline({
+      stagger: 0.1,
+      ease: "power2.in",
+      scrollTrigger: {
+        trigger: "#product1",
+        // markers: true,
+        start: "top 20%",
+        end: "+=2400 95%",
+        pin: true,
+        scrub: 1,
+      },
+    });
 
-    // solutionsTl
-    //   .from("#solutions .m1", {
-    //     opacity: 0,
-    //     x: 20,
-    //   })
-    //   .from("#solutions .p1", {
-    //     opacity: 0,
-    //     y: 20,
-    //   })
-    //   .to("#solutions .m1", {
-    //     opacity: 0,
-    //     x: 20,
-    //   })
-    //   .to("#solutions .p1", {
-    //     opacity: 0,
-    //     y: 20,
-    //   })
-    //   .from("#solutions .m2", {
-    //     opacity: 0,
-    //     x: 20,
-    //   })
-    //   .from("#solutions .p2", {
-    //     opacity: 0,
-    //     y: 20,
-    //   })
-    //   .to("#solutions .m2", {
-    //     opacity: 0,
-    //     x: 20,
-    //   })
-    //   .to("#solutions .p2", {
-    //     opacity: 0,
-    //     y: 20,
-    //   })
-    //   .from("#solutions .m3", {
-    //     opacity: 0,
-    //     x: 20,
-    //   });
-    // solutionsTl.from("#solutions .p3", {
-    //   opacity: 0,
-    //   y: 20,
-    // });
+    p1Tl
+      .from("#product1 .product-title", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product1 .mockup", {
+        opacity: 0,
+        x: 20,
+      })
+      .from("#product1 .p1", {
+        opacity: 0,
+        x: 20,
+      })
+      .from("#product1 .p2", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product1 .p3", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product1 .icons", {
+        opacity: 0,
+        y: 20,
+      })
+
+      .to("#product1 .icons", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product1 .p3", {
+        opacity: 0,
+        x: 20,
+      })
+      .to("#product1 .p2", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product1 .p1", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product1 .product-title", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product1 .mockup", {
+        opacity: 0,
+        x: 20,
+      });
+
+    // Product 2
+
+    p2TL = gsap.timeline({
+      stagger: 0.1,
+      ease: "power2.in",
+      scrollTrigger: {
+        trigger: "#product2",
+        // markers: true,
+        start: "top 20%",
+        end: "+=2400 95%",
+        pin: true,
+        scrub: 1,
+      },
+    });
+
+    p2TL
+      .from("#product2 .product-title", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product2 .mockup", {
+        opacity: 0,
+        x: 20,
+      })
+      .from("#product2 .p1", {
+        opacity: 0,
+        x: 20,
+      })
+      .from("#product2 .p2", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product2 .p3", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product2 .icons", {
+        opacity: 0,
+        y: 20,
+      })
+
+      .to("#product2 .icons", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product2 .p3", {
+        opacity: 0,
+        x: 20,
+      })
+      .to("#product2 .p2", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product2 .p1", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product2 .product-title", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product2 .mockup", {
+        opacity: 0,
+        x: 20,
+      });
+
+    p3TL = gsap.timeline({
+      stagger: 0.1,
+      ease: "power2.in",
+      scrollTrigger: {
+        trigger: "#product3",
+        // markers: true,
+        start: "top 20%",
+        end: "+=2400 95%",
+        pin: true,
+        scrub: 1,
+      },
+    });
+
+    p3TL
+      .from("#product3 .product-title", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product3 .mockup", {
+        opacity: 0,
+        x: 20,
+      })
+      .from("#product3 .p1", {
+        opacity: 0,
+        x: 20,
+      })
+      .from("#product3 .p2", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product3 .p3", {
+        opacity: 0,
+        y: 20,
+      })
+      .from("#product3 .icons", {
+        opacity: 0,
+        y: 20,
+      })
+
+      .to("#product3 .icons", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product3 .p3", {
+        opacity: 0,
+        x: 20,
+      })
+      .to("#product3 .p2", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product3 .p1", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product3 .product-title", {
+        opacity: 0,
+        y: 20,
+      })
+      .to("#product3 .mockup", {
+        opacity: 0,
+        x: 20,
+      });
 
     // Plan Section
 
@@ -141,7 +290,7 @@ function handleDeviceChange(e) {
       planTl.from(step, fadeInUp, "-=0.2");
     });
 
-    planTl.from("#plan .cta-btn", fadeInUp, "-=0.2");
+    planTl.from("#plan .cta-btn", zoomIn, "-=0.5");
 
     //  Failure Section
 
@@ -159,8 +308,7 @@ function handleDeviceChange(e) {
 
     failureTl
       .from("#failure h2", fadeInUp)
-      .from("#failure p", fadeInUp, "-=0.4")
-      .from("#failure .failure-img", fadeInLeft, "-=0.4");
+      .from("#failure p", fadeInUp, "-=0.4");
 
     //  Success Section
 
@@ -182,7 +330,7 @@ function handleDeviceChange(e) {
       .from("#success .b1", fadeInUp, "-=0.2")
       .from("#success .b2", fadeInUp, "-=0.2")
       .from("#success .b3", fadeInUp, "-=0.2")
-      .from("#success .cta-btn", zoomIn, "-=0.2");
+      .from("#success .cta-btn", fadeInUp, "-=0.2");
   }
 }
 
