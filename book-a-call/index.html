@@ -244,7 +244,14 @@
                 document.getElementById('email').value;
             let phone =
                 document.getElementById('phone').value;
-            sendForm(restaurantName, email, phone);
+
+            var reg = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            if (email == null || email == "" || !reg.test(email)) {
+                window.alert("Please Enter a valid email address!");
+            } else {
+                sendForm(restaurantName, email, phone);
+            }
 
         }
     </script>
